@@ -3,51 +3,120 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>법률사무소 Law to you</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap');
+    body {
+      font-family: 'Noto Serif KR', serif;
+      background-color: #f9fafb;
+      color: #1f2937; /* dark gray */
+    }
+    h1, h2, h3 {
+      font-weight: 900;
+      color: #0f172a; /* navy/dark */
+    }
+    .btn-primary {
+      background-color: #0f172a;
+      color: white;
+      transition: background-color 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #1e293b;
+    }
+    .btn-kakao {
+      background-color: #fee500;
+      color: #3c1e1e;
+      transition: background-color 0.3s;
+    }
+    .btn-kakao:hover {
+      background-color: #f7dd00;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800">
-  <header class="p-4 bg-white shadow">
-    <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">법률사무소 Law to you</h1>
-      <div class="space-x-4">
-        <a href="#about" class="hover:text-blue-500">회사소개</a>
-        <a href="#services" class="hover:text-blue-500">업무분야</a>
-        <a href="#contact" class="hover:text-blue-500">상담안내</a>
-        <a href="#cases" class="hover:text-blue-500">성공사례</a>
-        <a href="#location" class="hover:text-blue-500">오시는 길</a>
+<body>
+
+<header class="bg-white shadow-md py-4">
+  <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
+    <h1 class="text-3xl font-extrabold">법률사무소 Law to you</h1>
+    <nav class="space-x-6 text-lg text-gray-700">
+      <a href="#about" class="hover:text-blue-700">회사소개</a>
+      <a href="#cases" class="hover:text-blue-700">성공사례</a>
+      <a href="#contact" class="hover:text-blue-700">상담안내</a>
+      <a href="#location" class="hover:text-blue-700">오시는 길</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 메인 배너 -->
+<section class="relative overflow-hidden">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 md:px-0 py-16 gap-10">
+
+    <!-- 이미지 슬라이드처럼 2개 이미지 좌우 배치 -->
+    <div class="flex-1 flex flex-col gap-6">
+      <img src="https://images.unsplash.com/photo-1581093588401-0d23e9ae6824?auto=format&fit=crop&w=600&q=80" alt="법정 이미지" class="rounded-lg shadow-lg object-cover h-64 w-full" />
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="법률 서적" class="rounded-lg shadow-lg object-cover h-64 w-full" />
+    </div>
+
+    <!-- 텍스트 -->
+    <div class="flex-1 text-center md:text-left">
+      <h2 class="text-5xl mb-6 leading-tight">개인회생 · 파산 전문<br />법률사무소 Law to you</h2>
+      <p class="text-lg text-gray-600 mb-8">의뢰인의 삶을 다시 설계하는 든든한 파트너,<br />믿음과 신뢰의 법률사무소</p>
+      <div class="flex justify-center md:justify-start gap-6">
+        <a href="tel:07043540830" class="btn-primary px-8 py-3 rounded-full text-lg font-semibold shadow-lg">📞 전화 상담</a>
+        <a href="http://pf.kakao.com/_xhxoCRn" class="btn-kakao px-8 py-3 rounded-full text-lg font-semibold shadow-lg">💬 카카오톡 상담</a>
       </div>
     </div>
-  </header>
 
-  <section id="home" class="text-center py-20 bg-gray-50">
-    <h2 class="text-4xl font-bold mb-4">개인회생 · 파산 전문</h2>
-    <p class="text-lg text-gray-600">의뢰인의 삶을 다시 설계하는 든든한 파트너, 법률사무소 Law to you</p>
-    <div class="mt-8">
-      <a href="tel:07043540830" class="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition">📞 전화 상담</a>
-      <a href="http://pf.kakao.com/_xhxoCRn" class="bg-yellow-400 text-black px-6 py-3 rounded-full text-lg hover:bg-yellow-500 ml-4 transition">💬 카카오톡 상담</a>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section id="cases" class="py-16 px-4 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-6">성공사례</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="border rounded-xl p-4 shadow">
-          <h3 class="font-bold text-lg mb-2">[개인회생] 2억 채무 → 월 15만원 36개월 변제</h3>
-          <p class="text-gray-600 text-sm">40대 직장인, 채무과다 상태에서 변제계획 인가</p>
-        </div>
-        <div class="border rounded-xl p-4 shadow">
-          <h3 class="font-bold text-lg mb-2">[파산면책] 1억 5천 채무 완전 면책</h3>
-          <p class="text-gray-600 text-sm">자영업 실패로 파산 신청, 전액 면책 확정</p>
-        </div>
+<!-- 성공사례 -->
+<section id="cases" class="bg-white py-16">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold mb-8 border-b border-gray-300 pb-4">성공사례</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
+        <h3 class="text-2xl font-bold mb-2">[개인회생] 2억 채무 → 월 15만원 36개월 변제</h3>
+        <p class="text-gray-600">40대 직장인, 채무과다 상태에서 변제계획 인가</p>
+      </div>
+      <div class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
+        <h3 class="text-2xl font-bold mb-2">[파산면책] 1억 5천 채무 완전 면책</h3>
+        <p class="text-gray-600">자영업 실패로 파산 신청, 전액 면책 확정</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="bg-white border-t mt-16 py-6 text-center text-sm text-gray-500">
-    ⓒ 2025 법률사무소 Law to you. All rights reserved.
-  </footer>
+<!-- 상담안내 -->
+<section id="contact" class="bg-gray-50 py-16">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold mb-6">상담 안내</h2>
+    <p class="text-lg max-w-xl mx-auto mb-8">법률상담은 전화 또는 카카오톡으로 예약 가능합니다.<br />빠르고 친절하게 상담해 드리겠습니다.</p>
+    <div class="flex justify-center gap-8">
+      <a href="tel:07043540830" class="btn-primary px-10 py-4 rounded-full text-xl font-semibold shadow-lg">📞 전화 상담</a>
+      <a href="http://pf.kakao.com/_xhxoCRn" class="btn-kakao px-10 py-4 rounded-full text-xl font-semibold shadow-lg">💬 카카오톡 상담</a>
+    </div>
+  </div>
+</section>
+
+<!-- 오시는 길 -->
+<section id="location" class="bg-white py-16">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold mb-6 border-b border-gray-300 pb-4 text-center">오시는 길</h2>
+    <p class="text-center text-gray-700 mb-10 text-lg">서울 서초구 서초대로46길 65, 4층 402호</p>
+    <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
+      <iframe 
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD3YHZvJzYZhn9Fb8L-DjEU0nJq3DBOn64&q=서울+서초구+서초대로46길+65+4층+402호" 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-900 text-gray-300 py-8 text-center text-sm mt-20">
+  ⓒ 2025 법률사무소 Law to you. All rights reserved.
+</footer>
+
 </body>
 </html>
